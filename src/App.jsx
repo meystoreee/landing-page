@@ -225,8 +225,8 @@ function Navbar() {
           className="group relative font-bold text-2xl tracking-tighter"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
-          <span className="text-white">STUDIO</span>
-          <span className="bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400 text-transparent">/AI</span>
+          <span className="text-white">YUMY</span>
+          <span className="bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400 text-transparent">/PROJECT</span>
           <div className="-bottom-1 left-0 absolute bg-linear-to-r from-indigo-400 to-purple-400 w-0 group-hover:w-full h-0.5 transition-all duration-300" />
         </button>
 
@@ -354,8 +354,8 @@ function Hero() {
         <p
           data-reveal
           data-delay="0.3s"
-          className="mx-auto mb-12 max-w-2xl text-white/40 text-lg leading-relaxed"
-          style={{ fontFamily: "'Inter', sans-serif" }}
+          className="mx-auto mb-12 text-white/40 text-lg leading-relaxed"
+          style={{ fontFamily: "'Inter', sans-serif", maxWidth: "600px" }}
         >
           We help businesses and brands build exceptional digital experiences 
           that drive real results — from stunning websites to complete brand identities.
@@ -389,22 +389,29 @@ function Hero() {
           </button>
         </div>
 
-        {/* Stats - CENTERED */}
-        <div data-reveal data-delay="0.6s" className="flex justify-center items-center gap-12 mx-auto pt-12 border-white/5 border-t max-w-2xl">
-          {[
-            { val: "150+", label: "PROJECTS COMPLETED" },
-            { val: "98%", label: "CLIENT SATISFACTION" },
-            { val: "2x", label: "AVERAGE ROI" },
-          ].map(({ val, label }) => (
-            <div key={label} className="flex flex-col items-center gap-2">
-              <span className="font-bold text-white text-4xl" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-                {val}
-              </span>
-              <span className="font-medium text-white/30 text-xs text-center uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
-                {label}
-              </span>
-            </div>
-          ))}
+        {/* Stats - FULLY CENTERED for desktop */}
+        <div 
+          data-reveal 
+          data-delay="0.6s" 
+          className="pt-12 border-white/5 border-t"
+          style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto" }}
+        >
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            {[
+              { val: "150+", label: "PROJECTS COMPLETED" },
+              { val: "98%", label: "CLIENT SATISFACTION" },
+              { val: "2x", label: "AVERAGE ROI" },
+            ].map(({ val, label }) => (
+              <div key={label} className="flex flex-col items-center gap-2">
+                <span className="font-bold text-white text-4xl whitespace-nowrap" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+                  {val}
+                </span>
+                <span className="font-medium text-white/30 text-xs text-center uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
