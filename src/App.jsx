@@ -312,7 +312,6 @@ function Hero() {
 
   return (
     <section className="relative flex flex-col justify-center items-center bg-[#0A0A0A] px-6 pt-32 pb-24 min-h-screen overflow-hidden">
-      {/* Animated gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(99,102,241,0.15),transparent)]" />
       <div
         className="absolute inset-0 opacity-30 transition-transform duration-500"
@@ -322,7 +321,10 @@ function Hero() {
       />
       <div className="right-0 bottom-0 left-0 absolute bg-linear-to-r from-transparent via-white/10 to-transparent h-px" />
 
-      <div className="relative mx-auto w-full max-w-4xl text-center">
+      {/* Container dengan text-center yang dipastikan */}
+      <div className="relative w-full text-center">
+        
+        {/* Badge */}
         <div
           data-reveal
           data-delay="0s"
@@ -337,10 +339,11 @@ function Hero() {
           </span>
         </div>
 
+        {/* Title */}
         <h1
           data-reveal
           data-delay="0.15s"
-          className="mb-8 font-bold text-white leading-[1.1] tracking-tighter"
+          className="mb-8 w-full font-bold text-white text-center leading-[1.1] tracking-tighter"
           style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 8vw, 5rem)" }}
         >
           Digital Presence
@@ -351,16 +354,24 @@ function Hero() {
           </span>
         </h1>
 
+        {/* Description - DIPASTIKAN CENTER */}
         <p
           data-reveal
           data-delay="0.3s"
-          className="mx-auto mb-12 text-white/40 text-lg leading-relaxed"
-          style={{ fontFamily: "'Inter', sans-serif", maxWidth: "600px" }}
+          className="mx-auto mb-12 text-white/40 text-lg text-center leading-relaxed"
+          style={{ 
+            fontFamily: "'Inter', sans-serif", 
+            maxWidth: "600px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            display: "block"
+          }}
         >
           We help businesses and brands build exceptional digital experiences 
           that drive real results — from stunning websites to complete brand identities.
         </p>
 
+        {/* Buttons */}
         <div data-reveal data-delay="0.45s" className="flex flex-wrap justify-center gap-5 mb-28">
           <button
             onClick={() => {
@@ -389,7 +400,7 @@ function Hero() {
           </button>
         </div>
 
-        {/* Stats - FULLY CENTERED for desktop */}
+        {/* Stats - FULLY CENTERED */}
         <div 
           data-reveal 
           data-delay="0.6s" 
@@ -847,7 +858,7 @@ function Footer() {
         </div>
         <div className="flex md:flex-row flex-col justify-between items-center gap-4 pt-8 border-white/5 border-t">
           <p className="text-white/20 text-xs" style={{ fontFamily: "'Inter', sans-serif" }}>
-            © 2024 STUDIO/AI. All rights reserved.
+            © 2026 YUMY/PROJECT. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-white/20 hover:text-white/40 text-xs transition-colors">Privacy Policy</a>
