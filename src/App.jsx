@@ -311,7 +311,7 @@ function Hero() {
   }, []);
 
   return (
-    <section className="relative flex flex-col justify-center bg-[#0A0A0A] px-6 pt-32 pb-24 min-h-screen overflow-hidden">
+    <section className="relative flex flex-col justify-center items-center bg-[#0A0A0A] px-6 pt-32 pb-24 min-h-screen overflow-hidden">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(99,102,241,0.15),transparent)]" />
       <div
@@ -322,7 +322,7 @@ function Hero() {
       />
       <div className="right-0 bottom-0 left-0 absolute bg-linear-to-r from-transparent via-white/10 to-transparent h-px" />
 
-      <div className="relative mx-auto w-full max-w-6xl">
+      <div className="relative mx-auto w-full max-w-4xl text-center">
         <div
           data-reveal
           data-delay="0s"
@@ -340,8 +340,8 @@ function Hero() {
         <h1
           data-reveal
           data-delay="0.15s"
-          className="mb-8 font-bold text-white leading-[0.95] tracking-tighter"
-          style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(3rem, 10vw, 7rem)" }}
+          className="mb-8 font-bold text-white leading-[1.1] tracking-tighter"
+          style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "clamp(2.5rem, 8vw, 5rem)" }}
         >
           Digital Presence
           <br />
@@ -354,14 +354,14 @@ function Hero() {
         <p
           data-reveal
           data-delay="0.3s"
-          className="mb-12 max-w-lg text-white/40 text-lg leading-relaxed"
+          className="mx-auto mb-12 max-w-2xl text-white/40 text-lg leading-relaxed"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
           We help businesses and brands build exceptional digital experiences 
           that drive real results — from stunning websites to complete brand identities.
         </p>
 
-        <div data-reveal data-delay="0.45s" className="flex flex-wrap gap-5 mb-28">
+        <div data-reveal data-delay="0.45s" className="flex flex-wrap justify-center gap-5 mb-28">
           <button
             onClick={() => {
               const el = document.getElementById("contact");
@@ -389,17 +389,18 @@ function Hero() {
           </button>
         </div>
 
-        <div data-reveal data-delay="0.6s" className="gap-12 grid grid-cols-3 pt-12 border-white/5 border-t max-w-2xl">
+        {/* Stats - CENTERED */}
+        <div data-reveal data-delay="0.6s" className="flex justify-center items-center gap-12 mx-auto pt-12 border-white/5 border-t max-w-2xl">
           {[
-            { val: "150+", label: "Projects Completed" },
-            { val: "98%", label: "Client Satisfaction" },
-            { val: "2x", label: "Average ROI" },
+            { val: "150+", label: "PROJECTS COMPLETED" },
+            { val: "98%", label: "CLIENT SATISFACTION" },
+            { val: "2x", label: "AVERAGE ROI" },
           ].map(({ val, label }) => (
-            <div key={label} className="flex flex-col gap-2">
+            <div key={label} className="flex flex-col items-center gap-2">
               <span className="font-bold text-white text-4xl" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
                 {val}
               </span>
-              <span className="font-medium text-white/30 text-xs uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <span className="font-medium text-white/30 text-xs text-center uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {label}
               </span>
             </div>
@@ -802,8 +803,8 @@ function Footer() {
         <div className="gap-10 grid grid-cols-1 md:grid-cols-4 mb-10">
           <div className="md:col-span-2">
             <span className="inline-block mb-4 font-bold text-2xl tracking-tighter" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-              <span className="text-white">STUDIO</span>
-              <span className="bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400 text-transparent">/AI</span>
+              <span className="text-white">YUMY</span>
+              <span className="bg-clip-text bg-linear-to-r from-indigo-400 to-purple-400 text-transparent">/PROJECT</span>
             </span>
             <p className="max-w-md text-white/30 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
               Creating exceptional digital experiences that help brands stand out and grow.
